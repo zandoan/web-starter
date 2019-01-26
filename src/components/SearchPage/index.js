@@ -11,7 +11,7 @@ class SearchPage extends Component {
       <Query
         query={RESTAURANT_SEARCH_QUERY}
         variables={{
-          address: 'Manhattan'
+          address: 'Chicago'
         }}
       >
         {({ loading, error, data = {} }) => {

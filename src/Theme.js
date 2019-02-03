@@ -5,42 +5,40 @@ const DEFAULT_SPACING = 8;
 
 const palette = {
   common: {
-    black: '#000',
-    white: '#FFF',
+      black: "#000",
+      white: "#fff",
   },
   background: {
-    paper: '#fff',
-    default: '#fbf8f5'
+      paper: "#fff",
+      default: "#fafafa",
   },
   primary: {
-    light: '#462864',
-    main: '#231632',
-    dark: 'rgba(32, 22, 44, 1)',
-    contrastText: '#fff',
-    bright: '#8930fd',
-    brightHover: emphasize('#8930fd', 0.15)
+      light: "rgba(141, 146, 189, 1)",
+      main: "rgba(36, 104, 188, 1)",
+      dark: "rgba(15, 70, 196, 1)",
+      contrastText: "#fff",
   },
   secondary: {
-    light: '#ff4081',
-    main: '#ff146e',
-    dark: '#c51162',
-    contrastText: '#fff'
+      light: "#ff4081",
+      main: "#f50057",
+      dark: "#c51162",
+      contrastText: "#fff",
   },
   error: {
-    light: '#E57373',
-    main: '#D0021B',
-    dark: '#D32F2F',
-    contrastText: '#fff'
+      light: "#e57373",
+      main: "#f44336",
+      dark: "#d32f2f",
+      contrastText: "#fff",
   },
   text: {
-    primary: '#231632',
-    secondary: '#bcbabf',
-    disabled: 'rgba(0, 0, 0, 1)',
-    hint: 'rgba(218, 212, 237, 1)'
+      primary: "rgba(0, 0, 0, 0.87)",
+      secondary: "rgba(0, 0, 0, 0.54)",
+      disabled: "rgba(0, 0, 0, 0.38)",
+      hint: "rgba(0, 0, 0, 0.38)",
   },
   button: {
     standard: '#dfdaf0',
-  }
+  },
 };
 
 export default createMuiTheme({

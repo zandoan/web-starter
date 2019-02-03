@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-
 import { Query } from 'react-apollo';
+import { Grid } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+import ItemCard from '../ItemCard';
 import { RESTAURANT_SEARCH_QUERY } from '../../graphql/queries';
 
 class SearchPage extends Component {
@@ -30,11 +32,16 @@ class SearchPage extends Component {
             && data.search_restaurants.results.length > 0
           ) {
             return (
-              <div>
-                {data.search_restaurants.results.map((r) => {
-                  return <div>{r.title} ({r.id})</div>;
-                })}
-              </div>
+              <Grid container>
+                <Grid item md={4} sm={12}>
+                  {data.search_restaurants.results.map((r) => {
+                    return <ItemCard key={r.id} {...r} />;
+                  })}
+                </Grid>
+                <Grid item md={8} sm={false}>
+                  Map Space
+                </Grid>
+              </Grid>
             );
           }
 
